@@ -1,0 +1,10 @@
+<h1>Learn Uyghur language alphabet</h1>
+
+
+<div>
+  <ol>
+  <% @letters.each do |letter|%>
+    <li><a href="/<%= letter %>"><%= letter %></a></li>
+  <% end%>
+  </ol>
+</div>
