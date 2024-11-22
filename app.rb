@@ -22,7 +22,7 @@ end
 get("/:letter") do
   @chosed_letter = params.fetch("letter")
 
-  message_list.push({"role" => "user", "content" => "Make a example word in Uyghur language starts with #{@chosed_letter}"})
+  message_list.push({"role" => "user", "content" => "Make an example word in Uyghur language starts with #{@chosed_letter}"})
 
   
 
@@ -39,4 +39,11 @@ get("/:letter") do
   @content = message.fetch("content")
 
   erb(:flexible_letter)
+end
+
+get("/:letter/:example_word") do
+  @example_letter = params.fetch("letter")
+
+
+  erb(:show_example)
 end
