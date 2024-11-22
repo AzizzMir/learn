@@ -3,6 +3,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.1"
 
+gem "ruby-openai"
+
+
 gem "sinatra"
 gem "sinatra-contrib"
 
