@@ -11,18 +11,39 @@
 
     <style>
       .pictorial{
-          font-size: 280%;
+          display: flex; /* Enables flexbox layout */
+          flex-wrap: wrap; /* Allows letters to wrap to the next line */
+          justify-content: center; /* Aligns letters horizontally */
+          align-items: center; /* Aligns letters vertically */
+          direction: rtl; /* Sets text direction to right-to-left */
+          unicode-bidi: bidi-override; /* Ensures correct RTL behavior */
+          font-size: 400%;
           margin: 20px;
           padding: 0px;
           color:#0000ff; 
-          display:inline-block;
           text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
           user-select: none;
       }
+      .pictorial a {
+          margin-right: 50px; /* Space between letters */
+          text-decoration: none; /* Removes underline */
+          color: inherit; /* Uses the same color as .pictorial */
+          transition: transform 0.3s ease; /* Smooth zoom effect */
+      }
+      .pictorial a:hover{
+          -webkit-transform: scale(1.05);
+          -moz-transform: scale(1.05);	
+          transform: scale(1.05);	
+          text-shadow: 2px 4px 3px rgba(0,0,0,0.2);
+      }
       #content {
-          max-width:940px; 
-          margin:auto;
-          margin-top:40px;
+          display: flex; /* Enable flexbox */
+          justify-content: center; /* Horizontally centers the content */
+          align-items: center; /* Vertically centers the content */
+          width: 100%; /* Full width of the container */
+          height: 100vh; /* Full height of the viewport */
+          
+          margin-top: auto;
       }
     </style>
   </head>
@@ -32,7 +53,7 @@
     <!-- Navigation Bar -->
     <header class="bg-blue-400 text-white sticky top-0 z-50">
         <div class="container mx-auto flex justify-between items-center p-4">
-            <h1 class="text-2xl font-bold"><a href="/">Uyghur language ئۇيغۇرچە</a></h1>
+            <h1 class="text-2xl font-bold hover:text-yellow-400" ><a href="/">Uyghur language ئۇيغۇرچە</a></h1>
             <nav>
                 <ul class="flex space-x-6">
                     <li><a href="/about" class="hover:text-gray-400">About</a></li>
