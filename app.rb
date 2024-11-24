@@ -30,7 +30,7 @@ end
 get("/:letter/:example_word") do
   @example_letter = params.fetch("letter")
 
-  message_list.push({"role" => "user", "content" => "Make an example word in Uyghur language starts with #{@example_letter}"})
+  message_list.push({"role" => "user", "content" => "Show the pronunciation explanation of the #{@example_letter}, and make an example word in Uyghur language starts with #{@example_letter}"})
 
   
 
