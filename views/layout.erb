@@ -4,9 +4,43 @@
     <title>Learn Uyghur language</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- Add this in your <head> section -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+      .pictorial{
+          font-size: 280%;
+          margin: 20px;
+          padding: 0px;
+          color:#0000ff; 
+          display:inline-block;
+          text-shadow: 1px 2px 1px rgba(0,0,0,0.3);
+          user-select: none;
+      }
+      #content {
+          max-width:940px; 
+          margin:auto;
+          margin-top:40px;
+      }
+    </style>
   </head>
 
   <body>
+
+    <!-- Navigation Bar -->
+    <header class="bg-blue-400 text-white sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold"><a href="/">Uyghur language ئۇيغۇرچە</a></h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/about" class="hover:text-gray-400">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     <%= yield %>
   </body>
 </html>
