@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Learn Uyghur language</title>
     <link href="css/style.css" rel="stylesheet">
@@ -14,17 +14,33 @@
 
   <body>
 
-    <!-- Navigation Bar -->
+     <!--Navigation Bar -->
     <header class="bg-blue-400 text-white sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <h1 class="text-2xl font-bold hover:text-yellow-400" ><a href="/">Uyghur alphabets  ئۇيغۇرچە ھەرىپلەر</a></h1>
-            <nav>
+        <div class="flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold hover:text-yellow-400" ><a href="/">Uyghur Alphabets</h1>
+            <h1 class="text-2xl font-bold hover:text-yellow-400" dir="rtl"><a href="/">ئۇيغۇرچە ھەرىپلەر</a></h1>
+            <!--<nav>
                 <ul class="flex space-x-6">
-                    <li><a href="/about" class="hover:text-gray-400">About تور بېكەت ھەققىدە</a></li>
+                    <li><a href="/about" class="hover:text-yellow-400">About تور بېكەت ھەققىدە</a></li>
+                    <li><a href="/about" class="hover:text-yellow-400">About تور بېكەت ھەققىدە</a></li>
+                    <li><a href="/about" class="hover:text-yellow-400">About تور بېكەت ھەققىدە</a></li>
                 </ul>
-            </nav>
+            </nav>-->
         </div>
     </header>
+
+  <!--  <header class="bg-white shadow">
+  <div class="flex justify-between items-center px-4 sm:px-6 lg:px-8">
+    <h1 class="text-2xl font-bold hover:text-yellow-400">
+      <a href="/">Uyghur alphabets  ئۇيغۇرچە ھەرىپلەر</a>
+    </h1>
+    <nav>
+      <ul class="flex space-x-6">
+        <li><a href="/about" class="hover:text-yellow-400">About تور بېكەت ھەققىدە</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>-->
 
     <%= yield %>
   </body>
