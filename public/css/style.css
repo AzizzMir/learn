@@ -31,7 +31,7 @@
   margin-top:40px;
 }
 
-.parent-div {
+.option-list {
   display: flex; /* Makes the child divs align horizontally */
   justify-content: space-between; /* Distributes space evenly between child divs */
   align-items: center; /* Centers child divs vertically */
@@ -47,3 +47,5 @@
   flex: 1; /* Makes all child divs the same width */
   margin: 0 5px; /* Adds spacing between child divs */
 }
+
+
