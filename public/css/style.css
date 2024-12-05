@@ -25,7 +25,7 @@
   transform: scale(1.05);	
   text-shadow: 2px 4px 3px rgba(0,0,0,0.2);
 }
-#content {
+#control {
   max-width:1500px; 
   margin:auto;
   margin-top:40px;
@@ -35,15 +35,14 @@
   display: flex; /* Makes the child divs align horizontally */
   justify-content: space-between; /* Distributes space evenly between child divs */
   align-items: center; /* Centers child divs vertically */
-  border-bottom: 2px solid black; /* Underlines the parent div */
+  border-bottom: 1px solid black; /* Underlines the parent div */
   padding-bottom: 10px; /* Adds space between content and the underline */
   margin-bottom: 20px; /* Adds space below the parent div */
+  margin-top: 20px;
 }
 
 .child-div {
   padding: 10px; /* Adds padding inside each child div */
-  background-color: #f3f3f3; /* Adds a light background to the child divs */
-  border: 1px solid #ddd; /* Adds a border to the child divs */
   text-align: center; /* Centers text inside child divs */
   flex: 1; /* Makes all child divs the same width */
   margin: 0 5px; /* Adds spacing between child divs */
