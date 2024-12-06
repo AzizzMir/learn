@@ -54,3 +54,9 @@
   display: flex;
   justify-content: space-between; 
 }
+
+.request-button {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}

@@ -2,6 +2,7 @@ require "sinatra"
 require "sinatra/reloader"
 require "openai"
 require "dotenv/load"
+require "cgi"
 
 
 client = OpenAI::Client.new(access_token: ENV.fetch("OPENAI_API_KEY"))
@@ -36,15 +37,13 @@ end
 get("/:letter") do
   @chosed_letter = params.fetch("letter")
 
-  
-
   erb(:flexible_letter)
 end
 
 get("/:letter/:example_word") do
-  @example_letter = params.fetch("letter")
+  @chosed_letter = params.fetch("letter")
 
-  message_list.push({"role" => "user", "content" => "Show the pronunciation explanation of the #{@example_letter}, and make an example word in Uyghur language starts with #{@example_letter}"})
+  message_list.push({"role" => "user", "content" => "Show the pronunciation explanation of the #{@chosed_letter}, and make an example word in Uyghur language starts with #{@chosed_letter}"})
 
   
 

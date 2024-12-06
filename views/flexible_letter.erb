@@ -1,5 +1,11 @@
-<h1><%= @chosed_letter %></h1>
+<div class="pictorial">
+  <h1><%= @chosed_letter %></h1>
+</div>
 
-<form action="/<%= @chosed_letter %>/example_<%= @chosed_letter %>">
-  <a href="/<%= @chosed_letter %>"><button>Make a word starts with "<%= @chosed_letter %>" in Uyghur language</button></a>
-</form>
+<div class="flex justify-center h-screen">
+  <form action="/<%= @chosed_letter %>/example_<%= @chosed_letter %>" method="get">
+      <button type="submit" class="bg-blue-400 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">
+        Make a word starts with "<%= @chosed_letter %>" in Uyghur language
+      </button>
+  </form>
+</div>
