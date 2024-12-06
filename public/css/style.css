@@ -41,4 +41,12 @@
   margin-top: 20px;
 }
 
+.option-button {
+  display: flex;
+  justify-content: space-between; 
+}
 
+.option-text {
+  display: flex;
+  justify-content: space-between; 
+}
