@@ -2,7 +2,7 @@
 <!--option list-->
 <div id="control">
   <div class="option-list">
-    <div class="option-button"><a href="/vowels"><button class="bg-blue-400 text-white font-bold py-2 px-4 rounded hover:bg-blue-600" >Vowels</button></a></div>
+    <div class="option-button"><button class="bg-blue-400 text-white font-bold py-2 px-4 rounded hover:bg-blue-600" action="href">Vowels</button></div>
     <div class="option-button"><button class="bg-blue-400 text-white font-bold py-2 px-4 rounded hover:bg-blue-600" action="href">Consonents</button></div>
     <div class="option-text"><em>(The Alphabet)</em></div>
     <div class="option-text">ئېلىپبە</div>
@@ -13,7 +13,7 @@
 
 <div id="control">
   <div class="pictorial">
-  <% @letters.each do |letter|%>
+  <% @vowels.each do |letter|%>
     <a href="/<%= letter %>"><%= letter %></a>
   <% end%>
   </div>

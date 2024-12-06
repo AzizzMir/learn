@@ -41,11 +41,4 @@
   margin-top: 20px;
 }
 
-.child-div {
-  padding: 10px; /* Adds padding inside each child div */
-  text-align: center; /* Centers text inside child divs */
-  flex: 1; /* Makes all child divs the same width */
-  margin: 0 5px; /* Adds spacing between child divs */
-}
-
 
