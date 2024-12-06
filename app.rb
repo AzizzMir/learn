@@ -27,6 +27,12 @@ get("/vowels") do
   erb(:vowels)
 end
 
+get("/consonents") do
+  @consonents = ["ب", "پ", "ت", "ج", "چ", "خ", "د", "ر", "ز", "ژ", "س", "ش", "غ", "ف", "ج", "ك", "گ", "ڭ", "ل", "م", "ن", "ھ", "ۋ", "ي"]
+
+  erb(:consonents)
+end
+
 get("/:letter") do
   @chosed_letter = params.fetch("letter")
 
