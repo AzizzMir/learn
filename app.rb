@@ -43,21 +43,23 @@ end
 get("/:letter/:example_word") do
   @chosed_letter = params.fetch("letter")
 
-  message_list.push({"role" => "user", "content" => "Show the pronunciation explanation of the #{@chosed_letter}, and make an example word in Uyghur language starts with #{@chosed_letter}"})
+#  message_list.push({"role" => "user", "content" => "Show the pronunciation explanation of the #{@chosed_letter}, and make an example word in Uyghur language starts with #{@chosed_letter}"})
 
+
+
+#   api_response = client.chat( #chat method
+#     parameters: {
+#       model: "gpt-3.5-turbo",
+#       messages: message_list
+#     }
+#   )
+
+#   choices = api_response.fetch("choices")
+#   first_choice = choices.at(0)
+#   message = first_choice.fetch("message")
+#   @content = message.fetch("content")
+
+  @content = "This is for testing!"
   
-
-  api_response = client.chat( #chat method
-    parameters: {
-      model: "gpt-3.5-turbo",
-      messages: message_list
-    }
-  )
-
-  choices = api_response.fetch("choices")
-  first_choice = choices.at(0)
-  message = first_choice.fetch("message")
-  @content = message.fetch("content")
-
   erb(:show_example)
 end
