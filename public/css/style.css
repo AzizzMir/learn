@@ -36,7 +36,7 @@
 
 .option-list {
   display: flex; /* Makes the child divs align horizontally */
-  justify-content: space-between; /* Distributes space evenly between child divs */
+  justify-content: space-around; /* Distributes space evenly between child divs */
   align-items: center; /* Centers child divs vertically */
   border-bottom: 1px solid black; /* Underlines the parent div */
   padding-bottom: 10px; /* Adds space between content and the underline */
@@ -60,4 +60,3 @@
   justify-content: space-between;
   text-align: center;
 }
-

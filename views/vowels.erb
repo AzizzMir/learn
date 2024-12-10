@@ -1,9 +1,12 @@
 
 <div id="control">
   <div class="pictorial">
-  <% @vowels.each do |letter|%>
-    <a href="/<%= letter %>"><%= letter %></a>
-  <% end%>
+  <% @vowels_with_audio.each do |vowel, audio_path|%>
+        <a href="/<%= vowel %>" class="letter"
+          data-audio="<%= audio_path %>">
+          <%= vowel %>
+        </a>
+    <% end%>
   </div>
 </div>
 
@@ -11,13 +14,13 @@
 
   <div class="text-blue-500 text-2xl font-bold ml-40">
     <p>
-       ئۇيغۇر تىلىدا <%= @vowels.length() %> سوزۇق تاۋۇش بار. 
+       ئۇيغۇر تىلىدا <%= @vowels_with_audio.length() %> سوزۇق تاۋۇش بار. 
     </p>
   </div>
 
   <div class="text-blue-500 text-2xl font-bold mr-40">
     <p>
-      .There are <%= @vowels.length() %> vowels in Uyghur alphabet
+      .There are <%= @vowels_with_audio.length() %> vowels in Uyghur alphabet
     </p>
   </div>
 

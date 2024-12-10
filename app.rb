@@ -56,7 +56,16 @@ get("/") do
 end
 
 get("/vowels") do
-  @vowels = ["ئا", "ئە", "ئې", "ئى", "ئو", "ئۇ", "ئ‍ۆ", "ئ‍ۈ"]
+  @vowels_with_audio = {
+  'ئا' => '/audio/ئا.MP3', 
+  'ئە' => '/audio/ئە.MP3', 
+  'ئې' => '/audio/ئې.MP3', 
+  'ئى' => '/audio/ئى.MP3', 
+  'ئو' => '/audio/ئو.MP3', 
+  'ئۇ' => '/audio/ئۇ.MP3', 
+  'ئ‍ۆ' => '/audio/ئۆ.MP3', 
+  'ئ‍ۈ' => '/audio/ئ‍ۈ.MP3'
+  }
 
   erb(:vowels)
 end
