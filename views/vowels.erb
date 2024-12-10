@@ -1,7 +1,7 @@
 
 <div id="control">
   <div class="pictorial">
-  <% @vowels_with_audio.each do |vowel, audio_path|%>
+    <% @vowels_with_audio.each do |vowel, audio_path|%>
         <a href="/<%= vowel %>" class="letter"
           data-audio="<%= audio_path %>">
           <%= vowel %>

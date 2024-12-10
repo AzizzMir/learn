@@ -71,7 +71,32 @@ get("/vowels") do
 end
 
 get("/consonents") do
-  @consonents = ["ب", "پ", "ت", "ج", "چ", "خ", "د", "ر", "ز", "ژ", "س", "ش", "غ", "ف", "ق", "ك", "گ", "ڭ", "ل", "م", "ن", "ھ", "ۋ", "ي"]
+  @consonents_with_audio = {  
+    'ب' => '/audio/ب.MP3', 
+    'پ' => '/audio/پ.MP3', 
+    'ت' => '/audio/ت.MP3', 
+    'ج' => '/audio/ج.MP3', 
+    'چ' => '/audio/چ.MP3', 
+    'خ' => '/audio/خ.MP3', 
+    'د' => '/audio/د.MP3', 
+    'ر' => '/audio/ر.MP3', 
+    'ز' => '/audio/ز.MP3', 
+    'ژ' => '/audio/ژ.MP3', 
+    'س' => '/audio/س.MP3', 
+    'ش' => '/audio/ش.MP3', 
+    'غ' => '/audio/غ.MP3', 
+    'ف' => '/audio/ف.MP3',
+    'ق' => '/audio/ق.MP3',
+    'ك' => '/audio/ك.MP3', 
+    'گ' => '/audio/گ.MP3', 
+    'ڭ' => '/audio/ڭ.MP3', 
+    'ل' => '/audio/ل.MP3', 
+    'م' => '/audio/م.MP3', 
+    'ن' => '/audio/ن.MP3', 
+    'ھ' => '/audio/ھ.MP3',  
+    'ۋ' => '/audio/ۋ.MP3', 
+    'ي' => '/audio/ي.MP3'
+  }
 
   erb(:consonents)
 end

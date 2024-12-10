@@ -1,9 +1,12 @@
 
 <div id="control">
   <div class="pictorial">
-  <% @consonents.each do |letter|%>
-    <a href="/<%= letter %>"><%= letter %></a>
-  <% end%>
+    <% @consonents_with_audio.each do |consonent, audio_path|%>
+        <a href="/<%= consonent %>" class="letter"
+          data-audio="<%= audio_path %>">
+          <%= consonent %>
+        </a>
+    <% end%>
   </div>
 </div>
 
@@ -11,13 +14,13 @@
 
   <div class="text-blue-500 text-2xl font-bold ml-40">
     <p>
-       ئۇيغۇر تىلىدا <%= @consonents.length() %> ئ‍ۈزۈك تاۋۇش بار. 
+       ئۇيغۇر تىلىدا <%= @consonents_with_audio.length() %> ئ‍ۈزۈك تاۋۇش بار. 
     </p>
   </div>
 
   <div class="text-blue-500 text-2xl font-bold mr-40">
     <p>
-      .There are <%= @consonents.length() %> consonents in Uyghur alphabet
+      .There are <%= @consonents_with_audio.length() %> consonents in Uyghur alphabet
     </p>
   </div>
 
