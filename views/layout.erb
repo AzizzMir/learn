@@ -16,9 +16,9 @@
 
         // Loop through each letter
         letters.forEach(letter => {
-          const audioPath = letter.dataset.audio; // Get audio path from data attribute
+          let audioPath = letter.dataset.audio; // Get audio path from data attribute
 
-          // Create an audio object for the hover sound
+          // Create an audio object for the hover 
           const audio = new Audio(audioPath);
 
           // Play the audio when the letter is hovered over
