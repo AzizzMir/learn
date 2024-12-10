@@ -11,19 +11,30 @@
     
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        const elements = document.querySelectorAll(".pictorial");
+        // Select all letter elements
+        const letters = document.querySelectorAll(".letter");
 
-        elements.forEach(element => {
-          element.addEventListener("mouseenter", () => {
-            const audioSrc = element.getAttribute("data-audio");
-            if (audioSrc) {
-              const audio = new Audio(audioSrc);
-              audio.play();
-            }
+        // Loop through each letter
+        letters.forEach(letter => {
+          const audioPath = letter.dataset.audio; // Get audio path from data attribute
+
+          // Create an audio object for the hover sound
+          const audio = new Audio(audioPath);
+
+          // Play the audio when the letter is hovered over
+          letter.addEventListener("mouseover", () => {
+            audio.currentTime = 0; // Reset to the start
+            audio.play();
+          });
+
+          // Stop the audio when the mouse leaves the letter
+          letter.addEventListener("mouseleave", () => {
+            audio.pause();
           });
         });
       });
-    </script>
+  </script>
+
 
   </head>
 
