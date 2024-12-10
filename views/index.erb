@@ -1,11 +1,14 @@
 
 <div id="control">
   <div class="pictorial">
-  <% @letters.each do |letter|%>
-    <a href="/<%= letter %>"><%= letter %></a>
-  <% end%>
+    <% @letters.each_with_index do |letter, index|%>
+      <div id="<%= index %>" data-audio="/public/audio/<%= letter %>.MP3">
+        <a href="/<%= letter %>"><%= letter %></a>
+      </div>
+    <% end%>
   </div>
 </div>
+
 
 <div class="pictorial">
 

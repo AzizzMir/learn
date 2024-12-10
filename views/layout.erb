@@ -9,6 +9,22 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const elements = document.querySelectorAll(".pictorial");
+
+        elements.forEach(element => {
+          element.addEventListener("mouseenter", () => {
+            const audioSrc = element.getAttribute("data-audio");
+            if (audioSrc) {
+              const audio = new Audio(audioSrc);
+              audio.play();
+            }
+          });
+        });
+      });
+    </script>
+
   </head>
 
   <body>
