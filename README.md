@@ -81,4 +81,3 @@ This app is designed for users who are new to the Uyghur language and want an in
 The **Learn Uyghur Alphabets** app is ideal for anyone beginning their journey with the Uyghur language. With features like audio pronunciation and dynamic word examples, it provides an engaging and effective learning experience.  
 
 Get started and explore the Uyghur language today!
-
