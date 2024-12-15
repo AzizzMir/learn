@@ -19,7 +19,7 @@ set :public_folder, File.dirname(__FILE__) + '/public'
 get("/") do
   @letters_with_audio = {
     'ئا' => '/audio/ئا.MP3', 
-    'ئە' => '/audio/ئە.MP3',  
+    'ئە' => '/audio/ئە.MP3',  
     'ب' => '/audio/ب.MP3', 
     'پ' => '/audio/پ.MP3', 
     'ت' => '/audio/ت.MP3', 
