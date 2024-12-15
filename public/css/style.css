@@ -17,10 +17,12 @@
 }
 
 .pictorial a {
-  margin-right: 5%; 
+  margin-right: 9%; 
   text-decoration: none; 
   color: inherit; 
   transition: transform 0.3s ease; 
+  position: relative;
+  cursor: pointer;
 }
 .pictorial a:hover{
   -webkit-transform: scale(1.05);
@@ -76,4 +78,20 @@ html, body {
 
 main {
   flex: 1;
+}
+
+.pictorial a::after {
+  content: "Double tap to visit";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  color: gray;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.pictorial a:active::after {
+  opacity: 1;
 }

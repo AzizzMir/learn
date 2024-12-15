@@ -9,30 +9,49 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
+
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // Select all letter elements
-        const letters = document.querySelectorAll(".letter");
+        const isUserMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); // Check if user is on mobile
 
-        // Loop through each letter
+        const letters = document.querySelectorAll(".pictorial a"); // Adjust selector to your HTML structure
+
         letters.forEach(letter => {
-          let audioPath = letter.dataset.audio; // Get audio path from data attribute
-
-          // Create an audio object for the hover 
+          const audioPath = letter.dataset.audio || `/audio/${letter.textContent.trim()}.mp3`; // Adjust based on your audio file paths
           const audio = new Audio(audioPath);
 
-          // Play the audio when the letter is hovered over
-          letter.addEventListener("mouseover", () => {
-            audio.currentTime = 0; // Reset to the start
-            audio.play();
-          });
+          if (isUserMobile) {
+            let clickTimeout;
 
-          // Stop the audio when the mouse leaves the letter
-          letter.addEventListener("mouseleave", () => {
-            audio.pause();
-          });
+            letter.addEventListener("click", e => {
+              e.preventDefault(); // Prevent immediate navigation
+
+              if (clickTimeout) {
+                clearTimeout(clickTimeout);
+                clickTimeout = null;
+                window.location.href = letter.href; // Navigate on double-tap
+              } else {
+                clickTimeout = setTimeout(() => {
+                  clickTimeout = null;
+                  audio.currentTime = 0;
+                  audio.play(); // Play on single tap
+                }, 300); // Delay to differentiate single and double taps
+              }
+            });
+          } else {
+            // Computer: Play on hover
+            letter.addEventListener("mouseenter", () => {
+              audio.currentTime = 0; // Reset audio to the beginning
+              audio.play();
+            });
+
+            letter.addEventListener("mouseleave", () => {
+              audio.pause(); // Pause on hover out
+            });
+          }
         });
       });
+
     </script>
 
 
