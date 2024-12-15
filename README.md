@@ -1,5 +1,5 @@
 # Learn Uyghur Alphabets App
-
+Use the command `bin/server` to start the application in terminal.
 ## Overview
 
 The **Learn Uyghur Alphabets** app is a web-based tool designed to help users learn the basics of the Uyghur language. The app allows users to:  
